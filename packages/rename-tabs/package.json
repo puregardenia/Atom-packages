@@ -1,0 +1,69 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8864-6ntf9a\\package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8864-6ntf9a\\package.tgz",
+        "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8864-6ntf9a\\package.tgz",
+        "type": "local"
+      },
+      "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-8864-1qu9gyr"
+    ]
+  ],
+  "_from": "..\\d-1161021-8864-6ntf9a\\package.tgz",
+  "_id": "rename-tabs@0.2.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/rename-tabs",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8864-6ntf9a\\package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8864-6ntf9a\\package.tgz",
+    "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8864-6ntf9a\\package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:..\\d-1161021-8864-6ntf9a\\package.tgz",
+  "_shasum": "b7fcb1155d8822228ffab79089b967834cc15b16",
+  "_shrinkwrap": null,
+  "_spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8864-6ntf9a\\package.tgz",
+  "_where": "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-8864-1qu9gyr",
+  "author": {
+    "name": "JP Richardson"
+  },
+  "bugs": {
+    "url": "https://github.com/jprichardson/atom-rename-tabs/issues"
+  },
+  "dependencies": {},
+  "description": "Rename tabs titles with previous directory. Consistent with Sublime Text Editor behavior.",
+  "devDependencies": {},
+  "homepage": "https://github.com/jprichardson/atom-rename-tabs",
+  "keywords": [
+    "atom",
+    "tabs",
+    "rename",
+    "title"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "rename-tabs",
+  "optionalDependencies": {},
+  "readme": "Atom Rename Tabs\n================\n\nRenames your Atom Text Editor tab titles to more useful names if there are many\ninstances of the same file name open. This is consistent with Sublime Text editor tab\ntitle behavior.\n\nAtom's tab naming isn't very helpful if there are multiple files with the same\nname open. This package is useful if you write Node.js app with a lot of files\nnamed `index.js`. Atom would title the tabs `index.js - /my/project...`. That's\nnot very helpful. Assuming you have two files: `/my/project/foo/index.js` and\n`/my/project/bar/index.js` the tabs to `index.js - foo` and `index.js - bar` respectively.\n\nTo be clear, this isn't only for Node.js developers. This is for those who like\nSublime Text editor's tab title convention.\n\n\nInstall\n-------\n\n    apm install rename-tabs\n\nor go to `Settings` → `Install` → `Search` and search for `rename-tabs`.\n\n\nUsage\n-----\n\nJust open and edit files, the renaming will happen automatically.\n\n\nLicense\n-------\nMIT\nCopyright (c) 2015 [JP Richardson](https://www.github.com/jprichardson)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jprichardson/atom-rename-tabs.git"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "version": "0.2.0"
+}

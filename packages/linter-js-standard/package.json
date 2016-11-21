@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-6376-1y994si\\package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-6376-1y994si\\package.tgz",
+        "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-6376-1y994si\\package.tgz",
+        "type": "local"
+      },
+      "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-6376-1h6247m"
+    ]
+  ],
+  "_from": "..\\d-1161021-6376-1y994si\\package.tgz",
+  "_id": "linter-js-standard@3.6.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/linter-js-standard",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-6376-1y994si\\package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-6376-1y994si\\package.tgz",
+    "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-6376-1y994si\\package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:..\\d-1161021-6376-1y994si\\package.tgz",
+  "_shasum": "cf25647fb956656d2e2cedaa70297b1faf83ee8d",
+  "_shrinkwrap": null,
+  "_spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-6376-1y994si\\package.tgz",
+  "_where": "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-6376-1h6247m",
+  "activationCommands": [],
+  "author": {
+    "name": "Ricardo Barros",
+    "email": "ricardofbarros@hotmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ricardofbarros/linter-js-standard/issues"
+  },
+  "dependencies": {
+    "atom-package-deps": "^2.0.5",
+    "babel-eslint": "^7.1.0",
+    "esprima": "^3.1.1",
+    "esprima-fb": "^15001.1001.0-dev-harmony-fb",
+    "happiness": "^7.1.2",
+    "lodash.intersection": "^3.2.0",
+    "loophole": "^1.1.0",
+    "minimatch": "^2.0.8",
+    "pkg-config": "^1.1.0",
+    "q": "^1.4.1",
+    "semistandard": "^9.1.0",
+    "standard": "^5.4.1",
+    "uber-standard": "^5.1.0"
+  },
+  "description": "Linter plugin for JavaScript Standard Style",
+  "devDependencies": {
+    "standard": "^5.2.1"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/ricardofbarros/linter-js-standard#readme",
+  "keywords": [
+    "javascript",
+    "standard",
+    "linter"
+  ],
+  "license": "MIT",
+  "main": "./lib/init.js",
+  "name": "linter-js-standard",
+  "optionalDependencies": {},
+  "package-deps": [
+    "linter"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "linter-js-standard\n=========================\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)\n\nThis plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface for error/warning messages from [standard](https://github.com/feross/standard), [semistandard](https://github.com/Flet/semistandard) or [happiness](https://github.com/JedWatson/happiness).\n\n![demo](https://cloud.githubusercontent.com/assets/6867996/8457085/4bd7575e-2007-11e5-9762-e3f942b78232.gif)\n\n## Installation\nLinter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).\n\n### Plugin installation\n```\n$ apm install linter-js-standard\n```\n\n## Features\n- Support `standard`, `semistandard` and `happiness` styles.\n- Support ignore glob patterns in package.json.\n- Support custom parsers in package.json.\n- Support global variables in package.json _(supported by standard and semistandard)_\n- Support fenced code lint in markdown files\n\nCustom parsers currently supported:\n- esprima\n- esprima-fb\n- babel-eslint\n\n> Note: If a custom parser is missing from this list please make a PR by adding the missing parser to package.json dependencies.\n\n## Settings\n\n### checkStyleDevDependencies (default: false)\nCheck code style in package.json `devDependencies` or `dependencies`. If a valid style is not found it won't lint.\n\n> Note: This will use the nearest package.json.\n\n### honorStyleSettings (default: true)\nHonors style settings defined in package.json.\n\nCurrent style settings supported:\n- `ignore`\n- `parser`\n\n> Note: This will use the nearest package.json.\n\n### style (default: standard)\nSwitch between standard and semistandard styles.\nIf `checkStyleDevDependencies` is true this setting will be **ignored**.\n\n### showEslintRules (default: false)\nEnable/disable showing the id of the offended eslint rules.\n\nExample of messages while showEslintRules is:\n- **true:** Extra semicolon. (semi)\n- **false:** Extra semicolon.\n\n### lintMarkdownFiles (default: false)\nLint markdown fenced code blocks.\n\n### Global Variable Support\nTo have the linter not warn about undeclared variables when using global variables, honorStyleSettings has to be checked/true and a \"globals\" section has to be added to package.json:\n```\n\"semistandard\": {\n    \"globals\": [\n      \"var1\",\n      \"var2\"\n    ]\n  }\n  OR\n\"standard\": {\n    \"globals\": [\n      \"var1\",\n      \"var2\"\n    ]\n  }\n  ```\nAlso see https://github.com/feross/standard#i-use-a-library-that-pollutes-the-global-namespace-how-do-i-prevent-variable-is-not-defined-errors.\n\n## License\nMIT\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardofbarros/linter-js-standard.git"
+  },
+  "standard": {
+    "globals": [
+      "atom"
+    ]
+  },
+  "version": "3.6.0"
+}

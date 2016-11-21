@@ -1,0 +1,61 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "06c08cfb-86c8-4447-8972-44ea1fe7babf"
+  "atom-ternjs": {}
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "language-gfm"
+      "tree-view"
+      "vim-mode"
+      "relative-numbers"
+      "linter-js-standard"
+      "linter-jshint"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "Courier New"
+    fontSize: 19
+    showInvisibles: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "87e09873-4a81-bcf9-e4cb-de3c9ec22806"
+  linter:
+    showErrorPanel: false
+  "linter-eslint":
+    disableEslintIgnore: true
+    eslintrcPath: "C:\\Users\\admin\\.atom\\.eslintrc.json"
+    globalNodePath: "d:\\Program Files\\nodejs"
+    useGlobalEslint: true
+  "linter-jshint":
+    executablePath: "C:\\Users\\admin\\.atom\\jshint"
+  minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
+    plugins:
+      "git-diff": false
+      "git-diffDecorationsZIndex": 0
+  nuclide:
+    "nuclide-working-sets": {}
+  "sync-settings":
+    _analyticsUserId: "dda688c7-6b74-4e0b-9bbe-5a65b5e0b355"
+    _lastBackupHash: "40ef22e0f355c0fe0e1740df0c8c06441059cc00"
+    gistId: "223fcf82c9a5f88842fe391d54b0eb10"
+    personalAccessToken: "f870f56527ac671b78144274049aaed81a4f9c82"

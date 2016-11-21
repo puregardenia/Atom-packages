@@ -1,0 +1,17 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+atom-text-editor::shadow {
+	span.hard-tab {
+		 box-shadow	: inset -1px 0;
+		 display	: inline-block;
+		 color	: @syntax-indent-guide-color;
+
+		&.indent-guide:first-child {
+			 box-shadow	: inset 1px 0, inset -1px 0;
+		}
+	}
+}

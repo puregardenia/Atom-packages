@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7120-f9jtw5\\package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7120-f9jtw5\\package.tgz",
+        "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7120-f9jtw5\\package.tgz",
+        "type": "local"
+      },
+      "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-7120-1mrp8dk"
+    ]
+  ],
+  "_from": "..\\d-1161021-7120-f9jtw5\\package.tgz",
+  "_id": "linter-less@2.6.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/linter-less",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7120-f9jtw5\\package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7120-f9jtw5\\package.tgz",
+    "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7120-f9jtw5\\package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:..\\d-1161021-7120-f9jtw5\\package.tgz",
+  "_shasum": "bb19db84d93bfc8b1494e89c9a49a4f0732cdd6a",
+  "_shrinkwrap": null,
+  "_spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7120-f9jtw5\\package.tgz",
+  "_where": "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-7120-1mrp8dk",
+  "bugs": {
+    "url": "https://github.com/josa42/atom-linter-less/issues"
+  },
+  "dependencies": {
+    "atom-package-deps": "^4.0.1",
+    "less": "^2.7.1"
+  },
+  "description": "Lint `less` on the fly, using less",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.0.1"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/josa42/atom-linter-less#readme",
+  "license": "MIT",
+  "main": "./lib/init",
+  "name": "linter-less",
+  "optionalDependencies": {},
+  "package-deps": [
+    "linter"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "# linter-less\n\n[![Build Status](https://img.shields.io/travis/josa42/atom-linter-less.svg?style=flat-square)](https://travis-ci.org/josa42/atom-linter-less)\n[![Plugin installs!](https://img.shields.io/apm/dm/linter-less.svg?style=flat-square)](https://atom.io/packages/linter-less)\n[![Package version!](https://img.shields.io/apm/v/linter-less.svg?style=flat-square)](https://atom.io/packages/linter-less)\n[![Dependencies!](https://img.shields.io/david/josa42/atom-linter-less.svg?style=flat-square)](https://david-dm.org/josa42/atom-linter-less)\n\n\nThis linter plugin for [Linter](https://github.com/atom-community/linter) provides an interface to [less](http://lesscss.org).\n\n## Configuration\n\n* **Ignore undefined global variables:** Ignore variables marked as global e.g. `// global: @fontSize`\n* **Ignore undefined variables**\n* **IE Compatibility Checks**\n* **Strict Math:** Turn on or off strict math, where in strict mode, math requires brackets.\n* **Strict Units:** Allow mixed units, e.g. `1px+1em` or `1px*1px` which have units that cannot be represented.\n* **Ignore .lessrc configutation file**\n\nSee also: [lesscss.org](http://lesscss.org/usage/#command-line-usage).\n\n## Configuration File (`.lessrc`)\n\n```JSON\n{\n  \"paths\": [],\n  \"ieCompat\": true,\n  \"strictUnits\": false\n}\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josa42/atom-linter-less.git"
+  },
+  "scripts": {
+    "lint": "eslint lib"
+  },
+  "version": "2.6.0"
+}

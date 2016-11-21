@@ -1,0 +1,82 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7180-196k6og\\package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7180-196k6og\\package.tgz",
+        "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7180-196k6og\\package.tgz",
+        "type": "local"
+      },
+      "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-7180-1fw170k"
+    ]
+  ],
+  "_from": "..\\d-1161021-7180-196k6og\\package.tgz",
+  "_id": "open-in-browsers@0.0.19",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/open-in-browsers",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7180-196k6og\\package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7180-196k6og\\package.tgz",
+    "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7180-196k6og\\package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:..\\d-1161021-7180-196k6og\\package.tgz",
+  "_shasum": "3dc0f22b427448ccf5dae5cb195a5ab92625ab10",
+  "_shrinkwrap": null,
+  "_spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-7180-196k6og\\package.tgz",
+  "_where": "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-7180-1fw170k",
+  "bugs": {
+    "url": "https://github.com/skandasoft/open-in-browsers/issues"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "pp": {
+      "versions": {
+        ">=0.0.0": "consumeAddPreview"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3",
+    "lodash": "^3.10.1"
+  },
+  "description": "Open in IE/Chrome/Firefox/Opera",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/skandasoft/open-in-browsers#readme",
+  "keywords": [
+    "open in browser",
+    "IE",
+    "Firefox",
+    "chrome",
+    "Opera"
+  ],
+  "license": "MIT",
+  "main": "./lib/open-in-browsers",
+  "name": "open-in-browsers",
+  "optionalDependencies": {},
+  "readme": "# open-in-browsers package\n\nSimple Package to Open Current File in Different Browsers - IE,Chrome,Firefox,Opera,BrowserPlus -- With Support for localhost(enable it using settings)\n\nOpening Browsers are available in the status bar/context menu\n\n![open-in-browsers](https://raw.github.com/skandasoft/open-in-browsers/master/open-in-browsers.PNG)\n\nBrowser List in context menu\n![open-in-browsers](https://raw.github.com/skandasoft/open-in-browsers/master/Context-Menu.PNG)\n\nUpdate: Ability to New Browsers\n  command open-in-browsers:addBrowser\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skandasoft/open-in-browsers.git"
+  },
+  "version": "0.0.19"
+}
