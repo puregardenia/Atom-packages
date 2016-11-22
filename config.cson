@@ -41,7 +41,8 @@
     showErrorPanel: false
   "linter-eslint":
     disableEslintIgnore: true
-    eslintrcPath: "C:\\Users\\admin\\.atom\\.eslintrc.json"
+    disableWhenNoEslintConfig: false
+    eslintrcPath: "C:\\Users\\admin\\.atom\\.eslintrc"
     globalNodePath: "d:\\Program Files\\nodejs"
     useGlobalEslint: true
   "linter-jshint":
@@ -56,6 +57,6 @@
     "nuclide-working-sets": {}
   "sync-settings":
     _analyticsUserId: "dda688c7-6b74-4e0b-9bbe-5a65b5e0b355"
-    _lastBackupHash: "40ef22e0f355c0fe0e1740df0c8c06441059cc00"
+    _lastBackupHash: "5d887344abb25902b1fbb0c86cf9e52626d2bbb6"
     gistId: "223fcf82c9a5f88842fe391d54b0eb10"
-    personalAccessToken: "f870f56527ac671b78144274049aaed81a4f9c82"
+    personalAccessToken: "6f8724b792ec93cb81bc3da409411c5dc929f76b"
