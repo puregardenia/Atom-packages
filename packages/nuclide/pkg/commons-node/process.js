@@ -94,7 +94,7 @@ let getChildrenOfProcess = exports.getChildrenOfProcess = (() => {
 let psTree = exports.psTree = (() => {
   var _ref5 = (0, _asyncToGenerator.default)(function* () {
     let psPromise;
-    const isWindows = /^win/.test(process.platform);
+    const isWindows = isWindowsPlatform();
     if (isWindows) {
       // See also: https://github.com/nodejs/node-v0.x-archive/issues/2318
       psPromise = checkOutput('wmic.exe', ['PROCESS', 'GET', 'ParentProcessId,ProcessId,Name']);
@@ -252,7 +252,7 @@ function safeSpawn(command) {
   let options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
   const now = (0, (_performanceNow || _load_performanceNow()).default)();
-  const child = _child_process.default.spawn(command, args, options);
+  const child = _child_process.default.spawn(command, args, prepareProcessOptions(options));
   monitorStreamErrors(child, command, args, options);
   child.on('error', error => {
     logError('error with command:', command, args, options, 'error:', error);
@@ -459,6 +459,33 @@ function observeProcess(createProcess) {
   return _createProcessStream(createProcess, false, killTreeOnComplete).flatMap(getOutputStream);
 }
 
+let FB_INCLUDE_PATHS;
+try {
+  FB_INCLUDE_PATHS = require('./fb-config').FB_INCLUDE_PATHS;
+} catch (error) {
+  FB_INCLUDE_PATHS = [];
+}
+
+let DEFAULT_PATH_INCLUDE = [...FB_INCLUDE_PATHS, '/usr/local/bin'];
+
+function prepareProcessOptions(options) {
+  return Object.assign({}, options, {
+    env: preparePathEnvironment(options.env)
+  });
+}
+
+function preparePathEnvironment(env) {
+  const originalEnv = Object.assign({}, process.env, env);
+  if (isWindowsPlatform()) {
+    return originalEnv;
+  }
+  const seperator = ':';
+  const existingPath = originalEnv.PATH || '';
+  return Object.assign({}, originalEnv, {
+    PATH: [existingPath, ...DEFAULT_PATH_INCLUDE].join(seperator)
+  });
+}
+
 /**
  * Returns a promise that resolves to the result of executing a process.
  *
@@ -473,9 +500,9 @@ function asyncExecute(command, args) {
 
   const now = (0, (_performanceNow || _load_performanceNow()).default)();
   return new Promise((resolve, reject) => {
-    const process = _child_process.default.execFile(command, args, Object.assign({
+    const process = _child_process.default.execFile(command, args, prepareProcessOptions(Object.assign({
       maxBuffer: DEFAULT_MAX_BUFFER
-    }, options),
+    }, options)),
     // Node embeds various properties like code/errno in the Error object.
     (err, /* Error */stdoutBuf, stderrBuf) => {
       if (!options || !options.dontLogInNuclide) {
@@ -572,6 +599,16 @@ function writeToStdin(childProcess, options) {
 // If provided, read the original environment from NUCLIDE_ORIGINAL_ENV.
 // This should contain the base64-encoded output of `env -0`.
 let cachedOriginalEnvironment = null;
+const LOADED_SHELL_EVENT = 'core:loaded-shell-environment';
+
+if (typeof atom !== 'undefined') {
+  const disposable = atom.packages.onDidTriggerActivationHook(LOADED_SHELL_EVENT, () => {
+    cachedOriginalEnvironment = null;
+    // No need to include default paths now that the environment is loaded.
+    DEFAULT_PATH_INCLUDE = [];
+    disposable.dispose();
+  });
+}
 
 function getOriginalEnvironment() {
   if (cachedOriginalEnvironment != null) {
@@ -607,6 +644,11 @@ function exitEventToMessage(event) {
 
     return `signal ${ event.signal }`;
   }
+}
+
+function isWindowsPlatform() {
+  return (/^win/.test(process.platform)
+  );
 }
 
 function parsePsOutput(psOutput) {

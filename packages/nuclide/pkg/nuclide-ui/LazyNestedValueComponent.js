@@ -54,6 +54,12 @@ function _load_ignoreTextSelectionEvents() {
   return _ignoreTextSelectionEvents = _interopRequireDefault(require('./ignoreTextSelectionEvents'));
 }
 
+var _classnames;
+
+function _load_classnames() {
+  return _classnames = _interopRequireDefault(require('classnames'));
+}
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const SPINNER_DELAY = 100; /* ms */
@@ -345,10 +351,14 @@ let TopLevelLazyNestedValueComponent = class TopLevelLazyNestedValueComponent ex
   }
 
   render() {
-    const className = this.props.className != null ? this.props.className : 'nuclide-ui-lazy-nested-value';
+    const className = (0, (_classnames || _load_classnames()).default)(this.props.className, {
+      'native-key-bindings': true,
+      // Note(vjeux): the following line should probably be `: true`
+      'nuclide-ui-lazy-nested-value': this.props.className == null
+    });
     return _reactForAtom.React.createElement(
       'span',
-      { className: className },
+      { className: className, tabIndex: -1 },
       _reactForAtom.React.createElement(ValueComponent, Object.assign({}, this.props, {
         isRoot: true,
         expandedValuePaths: this.expandedValuePaths,

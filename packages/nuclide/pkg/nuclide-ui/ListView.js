@@ -85,13 +85,14 @@ let ListView = exports.ListView = class ListView extends _reactForAtom.React.Com
       onSelect: this._handleSelect
     }));
     const className = (0, (_classnames || _load_classnames()).default)({
+      'native-key-bindings': true,
       'nuclide-ui-listview': true,
       'nuclide-ui-listview-highlight-odd': alternateBackground,
       'nuclide-ui-listview-selectable': selectable
     });
     return _reactForAtom.React.createElement(
       'div',
-      { className: className },
+      { className: className, tabIndex: -1 },
       renderedItems
     );
   }

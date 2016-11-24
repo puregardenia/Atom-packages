@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8792-dxc7e8\\package.tgz",
+        "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161023-5956-z6up00\\package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8792-dxc7e8\\package.tgz",
-        "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8792-dxc7e8\\package.tgz",
+        "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161023-5956-z6up00\\package.tgz",
+        "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161023-5956-z6up00\\package.tgz",
         "type": "local"
       },
-      "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-8792-1ufqjv3"
+      "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161023-5956-1fxhfu8"
     ]
   ],
-  "_from": "..\\d-1161021-8792-dxc7e8\\package.tgz",
-  "_id": "nuclide@0.183.0",
+  "_from": "..\\d-1161023-5956-z6up00\\package.tgz",
+  "_id": "nuclide@0.184.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/nuclide",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8792-dxc7e8\\package.tgz",
+    "raw": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161023-5956-z6up00\\package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8792-dxc7e8\\package.tgz",
-    "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8792-dxc7e8\\package.tgz",
+    "rawSpec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161023-5956-z6up00\\package.tgz",
+    "spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161023-5956-z6up00\\package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:..\\d-1161021-8792-dxc7e8\\package.tgz",
-  "_shasum": "0e4ccb2bb2135bded6f0c3118688e9591b2b9844",
+  "_resolved": "file:..\\d-1161023-5956-z6up00\\package.tgz",
+  "_shasum": "5132732dca4bd282cb55f82ff74318efe9b84741",
   "_shrinkwrap": {
     "name": "nuclide",
-    "version": "0.183.0",
+    "version": "0.184.0",
     "dependencies": {
       "ansi-regex": {
         "version": "2.0.0",
@@ -1314,8 +1314,8 @@
       }
     }
   },
-  "_spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161021-8792-dxc7e8\\package.tgz",
-  "_where": "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161021-8792-1ufqjv3",
+  "_spec": "C:\\Users\\admin\\AppData\\Local\\Temp\\d-1161023-5956-z6up00\\package.tgz",
+  "_where": "C:\\Users\\admin\\AppData\\Local\\Temp\\apm-install-dir-1161023-5956-1fxhfu8",
   "atomTestRunner": "./lib/test-runner.js",
   "bin": {
     "nuclide-start-server": "./pkg/nuclide-server/nuclide-start-server"
@@ -1472,7 +1472,7 @@
     "test": "npm run lint-all && npm run flow"
   },
   "urlMain": "./lib/url-main.js",
-  "version": "0.183.0",
+  "version": "0.184.0",
   "warnings": [
     {
       "code": "ENOTSUP",
@@ -1480,7 +1480,7 @@
         "atom": ">=1.12.0",
         "node": ">=6.3.0"
       },
-      "pkgid": "nuclide@0.183.0"
+      "pkgid": "nuclide@0.184.0"
     },
     {
       "code": "ENOTSUP",
@@ -1488,7 +1488,7 @@
         "atom": ">=1.12.0",
         "node": ">=6.3.0"
       },
-      "pkgid": "nuclide@0.183.0"
+      "pkgid": "nuclide@0.184.0"
     }
   ]
 }

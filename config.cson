@@ -21,9 +21,10 @@
       ]
     disabledPackages: [
       "language-gfm"
-      "tree-view"
       "vim-mode"
       "relative-numbers"
+      "nuclide"
+      "sync-settings"
     ]
     openEmptyEditorOnStart: false
     telemetryConsent: "limited"
@@ -33,8 +34,9 @@
     ]
   editor:
     fontFamily: "Courier New"
-    fontSize: 19
+    fontSize: 17
     showInvisibles: true
+    tabLength: 4
   "exception-reporting":
     userId: "87e09873-4a81-bcf9-e4cb-de3c9ec22806"
   linter:
@@ -54,6 +56,8 @@
       "git-diff": false
       "git-diffDecorationsZIndex": 0
   nuclide:
+    "nuclide-home":
+      showHome: false
     "nuclide-working-sets": {}
   "sync-settings":
     _analyticsUserId: "dda688c7-6b74-4e0b-9bbe-5a65b5e0b355"
@@ -62,5 +66,7 @@
     personalAccessToken: "d48da0df87d07ff0cd23749649367d3f0ccd0436"
   "tabs-to-spaces":
     onSave: "untabify"
+  welcome:
+    showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false

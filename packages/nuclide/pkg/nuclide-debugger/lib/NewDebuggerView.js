@@ -152,10 +152,7 @@ let NewDebuggerView = exports.NewDebuggerView = class NewDebuggerView extends _r
     ) : null;
     return _reactForAtom.React.createElement(
       'div',
-      {
-        // Need native-key-bindings and tabIndex={-1} to be able to copy
-        className: 'nuclide-debugger-container-new native-key-bindings',
-        tabIndex: -1 },
+      { className: 'nuclide-debugger-container-new' },
       _reactForAtom.React.createElement(
         (_Section || _load_Section()).Section,
         { collapsable: true, headline: 'Debugger Controls',
